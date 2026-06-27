@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 
 const WEATHER_API = "https://api.open-meteo.com/v1/forecast";
 const GEO_API = "https://geocoding-api.open-meteo.com/v1/search";
-const OTM_KEY = "5ae2e3f221c38a28845f05b6780df48d720d8fb5dccacec8f8944769";
+const OTM_KEY = "YOUR_OPENTRIPMAP_API_KEY";
 const UNSPLASH_KEY = "58IiOc8fAyIqiFn0OGY1y_QrtszqXa8f3Uuph6RVXxk";
 
 const WMO_CODES = {
@@ -396,7 +396,7 @@ export default function App() {
                 {!placesLoading&&places.length===0&&<p style={{fontSize:13,color:"rgba(255,255,255,0.4)"}}>No notable places found nearby.</p>}
 
                 {/* Horizontal scroll row */}
-                <div style={{display:"flex",gap:14,overflowX:"auto",paddingBottom:10,scrollbarWidth:"none"}}>
+                <div style={{display:"flex",gap:14,overflowX:"auto",paddingBottom:10,scrollbarWidth:"thin",scrollbarColor:"rgba(255,255,255,0.2) transparent",WebkitOverflowScrolling:"touch"}}>
                   {places.map((p,i)=>(
                     <div key={i} style={{
                       minWidth:180,maxWidth:180,
